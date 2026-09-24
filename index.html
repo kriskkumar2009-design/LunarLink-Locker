@@ -1,11 +1,11 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>LunarLink Locker | NASA HUNCH</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,9 +13,10 @@
 
 <header>
     <nav class="navbar">
-        <div class="logo">
+
+        <a href="index.html" class="logo">
             <span>◈</span> LUNARLINK
-        </div>
+        </a>
 
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
@@ -25,9 +26,13 @@
             <a href="team.html">Team</a>
         </div>
 
-        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+            ☰
+        </button>
+
     </nav>
 </header>
+
 
 <main>
 
@@ -35,24 +40,39 @@
     <section class="hero">
 
         <div class="hero-content">
-            <p class="eyebrow">NASA HUNCH • ENGINEERING DESIGN</p>
+
+            <p class="eyebrow">
+                NASA HUNCH • DESIGN & PROTOTYPE
+            </p>
 
             <h1>
                 LUNAR<span>LINK</span><br>
                 LOCKER
             </h1>
 
+            <p class="hero-subtitle">
+                Multi-Purpose Lunar Locker
+            </p>
+
             <p class="hero-text">
-                A multi-purpose lunar locker designed to transport supplies,
-                reduce waste, and become useful infrastructure after unpacking.
+                A reusable lunar packing system designed to transport
+                supplies and give its materials a second purpose on the Moon.
             </p>
 
             <div class="hero-buttons">
-                <a href="project.html" class="button primary">Explore Project</a>
-                <a href="design.html" class="button secondary">View Design</a>
+                <a href="project.html" class="button primary">
+                    Explore Project
+                </a>
+
+                <a href="design.html" class="button secondary">
+                    View Design
+                </a>
             </div>
+
         </div>
 
+
+        <!-- SPACE VISUAL -->
         <div class="moon">
             <div class="moon-circle"></div>
             <div class="orbit"></div>
@@ -61,51 +81,92 @@
     </section>
 
 
-    <!-- INTRO -->
+    <!-- CONCEPT -->
     <section class="section">
 
         <div class="section-heading">
-            <p class="eyebrow">THE CONCEPT</p>
-            <h2>One Locker.<br><span>Multiple Purposes.</span></h2>
+
+            <p class="eyebrow">
+                THE CONCEPT
+            </p>
+
+            <h2>
+                One Locker.<br>
+                <span>Multiple Purposes.</span>
+            </h2>
+
         </div>
+
 
         <div class="intro-grid">
 
-            <div>
+            <div class="intro-text">
+
                 <p>
-                    LunarLink Locker is our response to the challenge of
-                    creating useful packaging for future lunar missions.
+                    LunarLink Locker is our approach to the NASA HUNCH
+                    Multi-Purpose Lunar Locker challenge.
                 </p>
 
                 <p>
-                    Instead of treating packaging as waste after supplies
-                    are removed, our design allows the locker to be
-                    disassembled and reused as lunar infrastructure.
+                    The locker is designed to carry supplies to the Moon.
+                    After those supplies are removed, the locker can be
+                    taken apart and its parts reused instead of becoming
+                    unnecessary packing waste.
                 </p>
+
             </div>
 
-            <div class="concept-card">
-                <div class="card-number">01</div>
-                <h3>PACK</h3>
-                <p>
-                    Supplies are safely transported inside the locker.
-                </p>
-            </div>
 
             <div class="concept-card">
-                <div class="card-number">02</div>
-                <h3>UNPACK</h3>
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <h3>
+                    PACK
+                </h3>
+
                 <p>
-                    The locker is opened and its components are separated.
+                    Supplies are transported safely inside the locker.
                 </p>
+
             </div>
 
+
             <div class="concept-card">
-                <div class="card-number">03</div>
-                <h3>REUSE</h3>
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <h3>
+                    UNPACK
+                </h3>
+
                 <p>
-                    Components are reassembled into useful infrastructure.
+                    The supplies are removed and the locker is
+                    disassembled.
                 </p>
+
+            </div>
+
+
+            <div class="concept-card">
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <h3>
+                    REUSE
+                </h3>
+
+                <p>
+                    The parts are reassembled into something useful
+                    for a lunar base.
+                </p>
+
             </div>
 
         </div>
@@ -113,34 +174,43 @@
     </section>
 
 
-    <!-- PROJECT SNAPSHOT -->
+    <!-- DESIGN SNAPSHOT -->
     <section class="dark-section">
 
         <div class="section-heading center">
-            <p class="eyebrow">PROJECT SNAPSHOT</p>
-            <h2>Designed for the Moon</h2>
+
+            <p class="eyebrow">
+                OUR PROTOTYPE
+            </p>
+
+            <h2>
+                Designed for the Moon
+            </h2>
+
+            <p class="section-description">
+                Our team is developing a 1/3-scale prototype that
+                demonstrates how a lunar packing locker can be reused
+                after its original purpose is complete.
+            </p>
+
         </div>
+
 
         <div class="stats">
 
             <div class="stat">
                 <strong>1/3</strong>
-                <span>Scale Prototype</span>
-            </div>
-
-            <div class="stat">
-                <strong>1 kg</strong>
-                <span>Test Load</span>
-            </div>
-
-            <div class="stat">
-                <strong>50 cm</strong>
-                <span>Drop Height</span>
+                <span>Prototype Scale</span>
             </div>
 
             <div class="stat">
                 <strong>01</strong>
-                <span>Reuse Concept</span>
+                <span>Main Reuse</span>
+            </div>
+
+            <div class="stat">
+                <strong>TABLE</strong>
+                <span>Current Concept</span>
             </div>
 
         </div>
@@ -148,36 +218,59 @@
     </section>
 
 
-    <!-- REUSE -->
+    <!-- TABLE REUSE -->
     <section class="section">
 
         <div class="reuse-layout">
 
             <div>
-                <p class="eyebrow">AFTER UNPACKING</p>
-                <h2>Packaging becomes <span>infrastructure.</span></h2>
+
+                <p class="eyebrow">
+                    AFTER UNPACKING
+                </p>
+
+                <h2>
+                    From packing box<br>
+                    to <span>table.</span>
+                </h2>
 
                 <p>
-                    Our current reuse concept transforms the locker components
-                    into a functional table. This gives packaging a second
-                    purpose instead of requiring astronauts to dispose of it.
+                    Our current reuse concept transforms the locker
+                    components into a small table. Because our prototype
+                    is built at 1/3 scale, the table is also demonstrated
+                    at a smaller scale.
+                </p>
+
+                <p>
+                    The goal is to show how the same parts used to
+                    transport supplies can have another useful purpose
+                    on the lunar surface.
                 </p>
 
                 <a href="design.html" class="text-link">
                     Explore the design →
                 </a>
+
             </div>
 
+
             <div class="reuse-box">
+
                 <div class="table-shape">
+
                     <div class="table-top"></div>
+
                     <div class="leg leg-one"></div>
                     <div class="leg leg-two"></div>
                     <div class="leg leg-three"></div>
                     <div class="leg leg-four"></div>
+
                 </div>
 
-                <p>REUSE CONCEPT / TABLE</p>
+                <p>
+                    CURRENT REUSE CONCEPT / TABLE
+                </p>
+
             </div>
 
         </div>
@@ -185,19 +278,33 @@
     </section>
 
 
-    <!-- CTA -->
+    <!-- PROJECT MESSAGE -->
     <section class="cta">
 
-        <p class="eyebrow">NASA HUNCH</p>
+        <p class="eyebrow">
+            NASA HUNCH
+        </p>
 
         <h2>
             Engineering for<br>
             <span>future lunar missions.</span>
         </h2>
 
-        <a href="team.html" class="button primary">
-            Meet the Team
-        </a>
+        <p class="cta-text">
+            Explore our project, design, documentation, and team.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="project.html" class="button primary">
+                Explore Project
+            </a>
+
+            <a href="team.html" class="button secondary">
+                Meet the Team
+            </a>
+
+        </div>
 
     </section>
 
@@ -205,13 +312,25 @@
 
 
 <footer>
+
     <div>
-        <strong>LUNARLINK LOCKER</strong>
-        <p>NASA HUNCH Engineering Design Project</p>
+
+        <strong>
+            LUNARLINK LOCKER
+        </strong>
+
+        <p>
+            NASA HUNCH • Multi-Purpose Lunar Locker
+        </p>
+
     </div>
 
-    <p>© 2026 LunarLink Team</p>
+    <p>
+        © 2026 LunarLink Team
+    </p>
+
 </footer>
+
 
 <script src="script.js"></script>
 
