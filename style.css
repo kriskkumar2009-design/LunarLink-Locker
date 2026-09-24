@@ -1,1 +1,726 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #08090d;
+    color: #f4f4f4;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 9, 13, 0.92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #24262e;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ff4d4d;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #aaa;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #ff4d4d;
+    padding-bottom: 5px;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #ff5b5b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 10vw, 120px);
+    line-height: 0.88;
+    letter-spacing: -5px;
+}
+
+.hero h1 span,
+h2 span,
+.page-hero h1 span {
+    color: #ff5b5b;
+}
+
+.hero-text {
+    max-width: 600px;
+    color: #aaa;
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.button.primary {
+    background: #ff4d4d;
+    color: white;
+}
+
+.button.primary:hover {
+    background: #ff6a6a;
+    transform: translateY(-2px);
+}
+
+.button.secondary {
+    border: 1px solid #555;
+    color: white;
+}
+
+.button.secondary:hover {
+    border-color: white;
+}
+
+
+/* MOON */
+
+.moon {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.moon-circle {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 30% 30%, #ddd, #888 55%, #333);
+
+    box-shadow:
+        0 0 80px rgba(255, 255, 255, 0.08);
+
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+
+.orbit {
+    width: 390px;
+    height: 160px;
+
+    border: 1px solid #333;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 110px;
+    left: 0;
+
+    transform: rotate(-25deg);
+}
+
+
+/* SECTIONS */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 110px 30px;
+}
+
+.dark-section {
+    background: #101116;
+    padding: 110px 30px;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading.center {
+    text-align: center;
+}
+
+.section h2,
+.dark-section h2 {
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+
+/* INTRO */
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.intro-grid > div:first-child {
+    padding-right: 40px;
+}
+
+.intro-grid p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.concept-card {
+    background: #12141a;
+    border: 1px solid #292c35;
+    padding: 30px;
+    min-height: 220px;
+}
+
+.card-number {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+
+.concept-card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* STATS */
+
+.stats {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    border-top: 1px solid #444;
+    padding-top: 25px;
+}
+
+.stat strong {
+    display: block;
+    font-family: "Space Grotesk";
+    font-size: 45px;
+}
+
+.stat span {
+    color: #888;
+}
+
+
+/* REUSE */
+
+.reuse-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.reuse-layout h2 {
+    font-size: 55px;
+}
+
+.reuse-layout p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    color: #ff5b5b;
+    font-weight: 600;
+}
+
+.reuse-box {
+    min-height: 350px;
+    background: #11131a;
+    border: 1px solid #292c35;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.reuse-box p {
+    margin-top: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* TABLE */
+
+.table-shape {
+    width: 250px;
+    height: 180px;
+    position: relative;
+}
+
+.table-top {
+    position: absolute;
+    top: 30px;
+    width: 250px;
+    height: 35px;
+    background: #888;
+    transform: skew(-15deg);
+}
+
+.leg {
+    position: absolute;
+    width: 20px;
+    height: 120px;
+    background: #666;
+    top: 60px;
+}
+
+.leg-one {
+    left: 20px;
+}
+
+.leg-two {
+    right: 20px;
+}
+
+
+/* CTA */
+
+.cta {
+    text-align: center;
+    padding: 130px 30px;
+    background: #0d0e13;
+}
+
+.cta h2 {
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+
+/* PAGE HERO */
+
+.page-hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 130px 30px 100px;
+}
+
+.page-hero h1 {
+    font-size: clamp(65px, 10vw, 120px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+}
+
+.page-hero > p:last-child {
+    color: #aaa;
+    max-width: 650px;
+    font-size: 19px;
+    margin-top: 30px;
+}
+
+
+/* TWO COLUMN */
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.two-column p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.two-column h2 {
+    font-size: 55px;
+}
+
+
+/* CARDS */
+
+.process-grid,
+.goal-grid,
+.feature-grid,
+.team-grid,
+.test-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.process-card,
+.info-card,
+.feature-card,
+.person-card,
+.test-card {
+    padding: 35px;
+    background: #15171e;
+    border: 1px solid #292c35;
+}
+
+.process-card span,
+.test-card strong {
+    color: #ff5b5b;
+    font-size: 13px;
+}
+
+.process-card h3,
+.info-card h3,
+.feature-card h3 {
+    margin: 30px 0 12px;
+}
+
+.process-card p,
+.info-card p,
+.feature-card p,
+.person-card p,
+.test-card p {
+    color: #999;
+}
+
+
+/* DESIGN */
+
+.feature-icon {
+    font-size: 35px;
+    color: #ff5b5b;
+}
+
+.model-placeholder {
+    min-height: 400px;
+    background: #090a0e;
+    border: 1px solid #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.model-placeholder p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #777;
+    margin-top: 30px;
+}
+
+
+/* CUBE */
+
+.cube {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform: rotateX(-20deg) rotateY(-30deg);
+    transform-style: preserve-3d;
+}
+
+.cube-front,
+.cube-top,
+.cube-side {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ff5b5b;
+    background: rgba(255, 80, 80, 0.05);
+}
+
+.cube-front {
+    transform: translateZ(75px);
+}
+
+.cube-top {
+    transform: rotateX(90deg) translateZ(75px);
+}
+
+.cube-side {
+    transform: rotateY(90deg) translateZ(75px);
+}
+
+
+/* DOCUMENTATION */
+
+.timeline {
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 40px;
+
+    padding: 50px 0;
+    border-bottom: 1px solid #292c35;
+}
+
+.timeline-number {
+    font-size: 30px;
+    color: #ff5b5b;
+    font-family: "Space Grotesk";
+}
+
+.timeline-item h2 {
+    margin-bottom: 15px;
+}
+
+.timeline-item p {
+    color: #999;
+}
+
+.test-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.next-steps {
+    max-width: 700px;
+    margin: auto;
+    list-style: none;
+}
+
+.next-steps li {
+    padding: 20px;
+    border-bottom: 1px solid #292c35;
+    color: #aaa;
+}
+
+.next-steps li::before {
+    content: "→";
+    color: #ff5b5b;
+    margin-right: 15px;
+}
+
+
+/* TEAM */
+
+.team-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.person-card {
+    min-height: 350px;
+}
+
+.person-number {
+    color: #ff5b5b;
+    font-size: 13px;
+}
+
+.person-card h2 {
+    margin: 70px 0 5px;
+}
+
+.role {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #ff5b5b !important;
+    margin-bottom: 20px;
+}
+
+.center-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.center-content h2 {
+    font-size: 80px;
+}
+
+
+/* FOOTER */
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid #24262e;
+
+    color: #777;
+    font-size: 13px;
+}
+
+footer strong {
+    color: white;
+    letter-spacing: 2px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        background: #08090d;
+
+        flex-direction: column;
+        padding: 25px 30px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+
+    .moon {
+        display: none;
+    }
+
+    .intro-grid,
+    .two-column,
+    .reuse-layout,
+    .process-grid,
+    .goal-grid,
+    .feature-grid,
+    .team-grid,
+    .test-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .two-column h2,
+    .reuse-layout h2 {
+        font-size: 40px;
+    }
+
+    .center-content h2 {
+        font-size: 55px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
