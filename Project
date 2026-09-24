@@ -1,1 +1,201 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project | LunarLink Locker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>◈</span> LUNARLINK
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="project.html" class="active">Project</a>
+            <a href="design.html">Design</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="team.html">Team</a>
+        </div>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </nav>
+</header>
+
+
+<main>
+
+<section class="page-hero">
+
+    <p class="eyebrow">01 / PROJECT</p>
+
+    <h1>
+        THE <span>MISSION</span>
+    </h1>
+
+    <p>
+        Creating packaging that can continue serving a purpose
+        after it reaches the Moon.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="two-column">
+
+        <div>
+            <p class="eyebrow">THE PROBLEM</p>
+
+            <h2>
+                What happens to packaging
+                <span>after the supplies are removed?</span>
+            </h2>
+        </div>
+
+        <div>
+            <p>
+                Future lunar missions will require astronauts to transport
+                large amounts of equipment and supplies. Packaging protects
+                these materials during transportation, but once the supplies
+                are removed, the packaging can become another item that must
+                be managed.
+            </p>
+
+            <p>
+                LunarLink Locker explores a different approach: designing
+                the packaging so that it can become something useful after
+                its original purpose is complete.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="dark-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">OUR SOLUTION</p>
+
+        <h2>
+            Pack it.<br>
+            Unpack it.<br>
+            <span>Reuse it.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="process-grid">
+
+        <div class="process-card">
+            <span>01</span>
+            <h3>TRANSPORT</h3>
+            <p>
+                The locker protects supplies during transportation
+                to the lunar environment.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <span>02</span>
+            <h3>DISASSEMBLE</h3>
+            <p>
+                Quick-release connections allow the components
+                to be separated after unpacking.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <span>03</span>
+            <h3>REASSEMBLE</h3>
+            <p>
+                The components can be configured into useful
+                lunar infrastructure.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">PROJECT GOALS</p>
+
+        <h2>What we're trying to achieve</h2>
+
+    </div>
+
+
+    <div class="goal-grid">
+
+        <div class="info-card">
+            <h3>01 / DURABILITY</h3>
+            <p>
+                Create a structure capable of protecting its contents
+                during handling and transportation.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>02 / REUSABILITY</h3>
+            <p>
+                Give the locker a second purpose after the supplies
+                have been removed.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>03 / SIMPLICITY</h3>
+            <p>
+                Use a practical assembly system that can be handled
+                and reconfigured efficiently.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>04 / EFFICIENCY</h3>
+            <p>
+                Combine transportation and infrastructure into
+                one multipurpose system.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+    <div>
+        <strong>LUNARLINK LOCKER</strong>
+        <p>NASA HUNCH Engineering Design Project</p>
+    </div>
+
+    <p>© 2026 LunarLink Team</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
