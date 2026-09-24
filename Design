@@ -1,1 +1,191 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Design | LunarLink Locker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>◈</span> LUNARLINK
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Project</a>
+            <a href="design.html" class="active">Design</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="team.html">Team</a>
+        </div>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="page-hero">
+
+    <p class="eyebrow">02 / DESIGN</p>
+
+    <h1>
+        BUILT FOR<br>
+        <span>REUSE.</span>
+    </h1>
+
+    <p>
+        A modular design that can change purpose after reaching the Moon.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">DESIGN FEATURES</p>
+
+        <h2>The locker system</h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">▣</div>
+            <h3>STACKABLE</h3>
+            <p>
+                The locker is designed to be organized and stacked
+                efficiently during transportation.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">⌁</div>
+            <h3>REMOVABLE</h3>
+            <p>
+                Connections allow components to be separated and
+                reused for another purpose.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">◇</div>
+            <h3>MULTI-PURPOSE</h3>
+            <p>
+                The same structural components can be used to
+                create lunar infrastructure.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">+</div>
+            <h3>ADAPTABLE</h3>
+            <p>
+                The design can be modified to support different
+                configurations and future concepts.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="dark-section">
+
+    <div class="two-column">
+
+        <div>
+
+            <p class="eyebrow">CAD MODEL</p>
+
+            <h2>
+                From digital design
+                <span>to physical prototype.</span>
+            </h2>
+
+        </div>
+
+        <div class="model-placeholder">
+
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-top"></div>
+                <div class="cube-side"></div>
+            </div>
+
+            <p>CAD MODEL / LUNARLINK LOCKER</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">REUSE CONCEPT</p>
+
+        <h2>From locker to table</h2>
+
+    </div>
+
+
+    <div class="reuse-explanation">
+
+        <p>
+            Once the locker has completed its transportation purpose,
+            its components can be disassembled and rearranged into
+            useful infrastructure.
+        </p>
+
+        <p>
+            Our current concept focuses on creating a table that could
+            provide astronauts with an additional functional surface
+            without requiring an entirely new structure to be transported.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>LUNARLINK LOCKER</strong>
+        <p>NASA HUNCH Engineering Design Project</p>
+    </div>
+
+    <p>© 2026 LunarLink Team</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
