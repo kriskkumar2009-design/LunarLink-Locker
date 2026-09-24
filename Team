@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team | LunarLink Locker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>◈</span> LUNARLINK
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Project</a>
+            <a href="design.html">Design</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="team.html" class="active">Team</a>
+        </div>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="page-hero">
+
+    <p class="eyebrow">04 / TEAM</p>
+
+    <h1>
+        THE <span>TEAM</span>
+    </h1>
+
+    <p>
+        Three students working together to design a solution
+        for future lunar missions.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="team-grid">
+
+        <div class="person-card">
+
+            <div class="person-number">01</div>
+
+            <h2>Kris Kumar</h2>
+
+            <p class="role">ENGINEERING / DESIGN</p>
+
+            <p>
+                Contributes to the engineering design, documentation,
+                programming, and development of the LunarLink Locker.
+            </p>
+
+        </div>
+
+
+        <div class="person-card">
+
+            <div class="person-number">02</div>
+
+            <h2>Jeremiah Collado</h2>
+
+            <p class="role">ENGINEERING / PROTOTYPE</p>
+
+            <p>
+                Contributes to prototype development, construction,
+                testing, and project development.
+            </p>
+
+        </div>
+
+
+        <div class="person-card">
+
+            <div class="person-number">03</div>
+
+            <h2>Alexander Gomez</h2>
+
+            <p class="role">ENGINEERING / DEVELOPMENT</p>
+
+            <p>
+                Contributes to the development, testing, and improvement
+                of the LunarLink Locker concept.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="dark-section">
+
+    <div class="center-content">
+
+        <p class="eyebrow">OUR APPROACH</p>
+
+        <h2>
+            Think.<br>
+            Build.<br>
+            <span>Improve.</span>
+        </h2>
+
+        <p>
+            Our team combines engineering, design, research, and
+            hands-on building to develop a practical lunar solution.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>LUNARLINK LOCKER</strong>
+        <p>NASA HUNCH Engineering Design Project</p>
+    </div>
+
+    <p>© 2026 LunarLink Team</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
