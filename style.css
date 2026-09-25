@@ -1,1202 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
-/* =========================================
-   RESET
-========================================= */
+/* Basic setup */
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
 body {
-    background: #08090d;
-    color: #f4f4f4;
-    font-family: "Inter", sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background-color: #0b0d12;
+    color: white;
+
     line-height: 1.6;
-    overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-.logo {
-    font-family: "Space Grotesk", sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 
-/* =========================================
-   NAVIGATION
-========================================= */
+/* Header */
 
 header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #151820;
 
-    background: rgba(8, 9, 13, 0.96);
-    backdrop-filter: blur(12px);
+    padding: 20px;
 
-    border-bottom: 1px solid #252730;
+    text-align: center;
+
+    border-bottom: 2px solid #333;
 }
 
-.navbar {
-    width: 100%;
-    max-width: 1200px;
+header h1 {
+    margin: 0 0 15px;
 
-    margin: 0 auto;
-    padding: 16px 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    color: #ff4d4d;
 }
 
-.logo {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
 
-.logo span {
-    color: #ff5058;
-}
+/* Navigation */
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: #999;
-    font-size: 12px;
-
-    transition: 0.2s ease;
-}
-
-.nav-links a:hover {
+nav a {
     color: white;
+
+    text-decoration: none;
+
+    margin: 0 12px;
+
+    font-size: 15px;
 }
 
-.nav-links a.active {
-    color: white;
-    border-bottom: 2px solid #ff5058;
-    padding-bottom: 4px;
-}
-
-.menu-button {
-    display: none;
-
-    border: none;
-    background: none;
-
-    color: white;
-    font-size: 24px;
-
-    cursor: pointer;
+nav a:hover {
+    color: #ff4d4d;
 }
 
 
-/* =========================================
-   HERO
-========================================= */
+/* Main sections */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+section {
+    padding: 70px 20px;
+
+    border-bottom: 1px solid #292d36;
+}
+
+section h2 {
+    color: #ff4d4d;
+
+    font-size: 35px;
+
+    margin-top: 0;
+}
+
+section p {
+    color: #c4c4c4;
+
+    max-width: 700px;
+}
+
+
+/* Hero */
 
 .hero {
-    width: 100%;
-    max-width: 1200px;
+    text-align: center;
 
-    min-height: 680px;
-
-    margin: 0 auto;
-    padding: 80px 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 50px;
+    padding: 100px 20px;
 }
 
-.hero-content {
-    width: 55%;
-    max-width: 650px;
+.hero h2 {
+    font-size: 60px;
+
+    color: white;
+
+    margin-bottom: 15px;
 }
 
-.eyebrow {
-    color: #ff5058;
-
-    font-size: 10px;
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 18px;
+.hero h2::first-letter {
+    color: #ff4d4d;
 }
 
-.hero h1 {
-    margin: 0;
+.hero p {
+    margin: 0 auto 30px;
 
-    font-size: clamp(65px, 8vw, 105px);
-
-    line-height: 0.88;
-
-    letter-spacing: -4px;
-}
-
-.hero h1 span {
-    color: #ff5058;
-}
-
-.hero-text {
-    max-width: 540px;
-
-    margin-top: 25px;
-
-    color: #999;
-
-    font-size: 16px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 12px;
-
-    margin-top: 30px;
+    font-size: 20px;
 }
 
 
-/* =========================================
-   BUTTONS
-========================================= */
+/* Buttons */
 
 .button {
     display: inline-block;
 
+    background-color: #ff4d4d;
+
+    color: white;
+
     padding: 12px 20px;
 
-    border-radius: 3px;
+    text-decoration: none;
 
-    font-size: 13px;
-    font-weight: 600;
+    border-radius: 4px;
 
-    transition: 0.2s ease;
+    margin-top: 10px;
 }
 
-.button.primary {
-    background: #ff5058;
-    color: white;
-}
-
-.button.primary:hover {
-    background: #ff7077;
-    transform: translateY(-2px);
-}
-
-.button.secondary {
-    border: 1px solid #555;
-    color: white;
-}
-
-.button.secondary:hover {
-    border-color: white;
-    transform: translateY(-2px);
+.button:hover {
+    background-color: #d93636;
 }
 
 
-/* =========================================
-   MOON
-========================================= */
+/* Cards */
 
-.moon {
-    width: 340px;
-    height: 340px;
-
-    position: relative;
-
-    flex-shrink: 0;
-}
-
-.moon-circle {
-    position: absolute;
-
-    width: 240px;
-    height: 240px;
-
-    top: 50px;
-    left: 50px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle at 30% 30%,
-            #ddd,
-            #999 55%,
-            #333
-        );
-
-    box-shadow:
-        0 0 70px rgba(255,255,255,0.08);
-}
-
-.orbit {
-    position: absolute;
-
-    width: 330px;
-    height: 130px;
-
-    top: 105px;
-    left: 5px;
-
-    border: 1px solid #333;
-    border-radius: 50%;
-
-    transform: rotate(-25deg);
-}
-
-
-/* =========================================
-   GENERAL SECTION
-========================================= */
-
-.section {
-    width: 100%;
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 100px 40px;
-}
-
-.dark-section {
-    width: 100%;
-
-    padding: 100px 40px;
-
-    background: #101116;
-}
-
-.section-heading {
-    margin-bottom: 45px;
-}
-
-.section-heading.center {
-    text-align: center;
-}
-
-.section h2,
-.dark-section h2 {
-    margin-bottom: 20px;
-
-    font-size: clamp(45px, 6vw, 70px);
-
-    line-height: 1;
-}
-
-.section h2 span {
-    color: #ff5058;
-}
-
-
-/* =========================================
-   CONCEPT
-========================================= */
-
-.intro-grid {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.4fr)
-        minmax(0, 1fr)
-        minmax(0, 1fr);
+.cards {
+    display: flex;
 
     gap: 20px;
-}
 
-.intro-grid > div {
-    min-width: 0;
-}
-
-.intro-grid > div:first-child {
-    padding-right: 20px;
-}
-
-.intro-grid p {
-    color: #aaa;
-
-    font-size: 15px;
-
-    margin-bottom: 20px;
-}
-
-.concept-card {
-    min-width: 0;
-    min-height: 225px;
-
-    padding: 30px;
-
-    background: #12141a;
-
-    border: 1px solid #292c35;
-
-    transition: 0.2s ease;
-}
-
-.concept-card:hover {
-    border-color: #ff5058;
-    transform: translateY(-3px);
-}
-
-.card-number {
-    color: #ff5058;
-
-    font-size: 12px;
-
-    margin-bottom: 45px;
-}
-
-.concept-card h3 {
-    font-size: 18px;
-
-    margin-bottom: 10px;
-}
-
-.concept-card p {
-    color: #999;
-}
-
-
-/* =========================================
-   PROTOTYPE
-========================================= */
-
-.stats {
-    width: 100%;
-    max-width: 900px;
-
-    margin: 45px auto 0;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 30px;
-}
-
-.stat {
-    min-width: 0;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #444;
-}
-
-.stat strong {
-    display: block;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: 40px;
-
-    margin-bottom: 5px;
-}
-
-.stat span {
-    color: #888;
-
-    font-size: 13px;
-}
-
-
-/* =========================================
-   REUSE
-========================================= */
-
-.reuse-layout {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
-    gap: 60px;
-
-    align-items: center;
-}
-
-.reuse-layout > div {
-    min-width: 0;
-}
-
-.reuse-layout h2 {
-    font-size: clamp(42px, 5vw, 65px);
-
-    line-height: 1;
-
-    margin-bottom: 25px;
-}
-
-.reuse-layout h2 span {
-    color: #ff5058;
-}
-
-.reuse-layout p {
-    max-width: 540px;
-
-    color: #aaa;
-
-    font-size: 15px;
-
-    margin-bottom: 20px;
-}
-
-.text-link {
-    display: inline-block;
-
-    margin-top: 8px;
-
-    color: #ff5058;
-
-    font-weight: 600;
-}
-
-.text-link:hover {
-    color: #ff8585;
-}
-
-
-/* =========================================
-   TABLE
-========================================= */
-
-.reuse-box {
-    width: 100%;
-    min-height: 400px;
-
-    background: #11131a;
-
-    border: 1px solid #292c35;
-
-    display: flex;
-    align-items: center;
     justify-content: center;
 
-    flex-direction: column;
+    margin-top: 30px;
 }
 
-.table-shape {
-    width: 250px;
-    height: 190px;
+.card {
+    flex: 1;
 
-    position: relative;
-}
-
-.table-top {
-    position: absolute;
-
-    top: 25px;
-    left: 0;
-
-    width: 250px;
-    height: 35px;
-
-    background: #999;
-
-    border: 1px solid #aaa;
-
-    transform: skew(-12deg);
-}
-
-.leg {
-    position: absolute;
-
-    top: 58px;
-
-    width: 20px;
-    height: 120px;
-
-    background: #666;
-}
-
-.leg-one {
-    left: 20px;
-}
-
-.leg-two {
-    right: 20px;
-}
-
-.leg-three {
-    left: 65px;
-}
-
-.leg-four {
-    right: 65px;
-}
-
-.reuse-box > p {
-    margin-top: 25px;
-
-    color: #777;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-}
-
-
-/* =========================================
-   CTA
-========================================= */
-
-.cta {
-    width: 100%;
-
-    padding: 110px 30px;
-
-    text-align: center;
-
-    background: #101116;
-}
-
-.cta h2 {
-    margin-bottom: 30px;
-
-    font-size: clamp(50px, 7vw, 85px);
-
-    line-height: 1;
-}
-
-.cta h2 span {
-    color: #ff5058;
-}
-
-
-/* =========================================
-   PAGE HERO
-========================================= */
-
-.page-hero {
-    width: 100%;
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 100px 40px 80px;
-}
-
-.page-hero h1 {
-    font-size: clamp(60px, 9vw, 115px);
-
-    line-height: 0.9;
-
-    letter-spacing: -4px;
-}
-
-.page-hero h1 span {
-    color: #ff5058;
-}
-
-
-/* =========================================
-   TWO COLUMN
-========================================= */
-
-.two-column {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
-    gap: 60px;
-}
-
-.two-column > div {
-    min-width: 0;
-}
-
-.two-column h2 {
-    font-size: 50px;
-
-    line-height: 1;
-}
-
-.two-column p {
-    color: #aaa;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================
-   CARDS
-========================================= */
-
-.process-grid,
-.goal-grid,
-.feature-grid,
-.team-grid,
-.test-grid {
-    width: 100%;
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 20px;
-}
-
-.process-card,
-.info-card,
-.feature-card,
-.person-card,
-.test-card {
-    min-width: 0;
-
-    padding: 30px;
-
-    background: #15171e;
-
-    border: 1px solid #292c35;
-
-    transition: 0.2s ease;
-}
-
-.process-card:hover,
-.info-card:hover,
-.feature-card:hover,
-.person-card:hover,
-.test-card:hover {
-    border-color: #444;
-
-    transform: translateY(-3px);
-}
-
-.process-card span,
-.test-card strong {
-    color: #ff5058;
-}
-
-.process-card h3,
-.info-card h3,
-.feature-card h3 {
-    margin: 25px 0 10px;
-}
-
-.process-card p,
-.info-card p,
-.feature-card p,
-.person-card p,
-.test-card p {
-    color: #999;
-}
-
-
-/* =========================================
-   DESIGN
-========================================= */
-
-.model-placeholder {
-    width: 100%;
-    min-height: 400px;
-
-    background: #090a0e;
+    background-color: #151820;
 
     border: 1px solid #333;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 25px;
 
-    flex-direction: column;
+    min-height: 160px;
 }
 
-.model-placeholder p {
-    margin-top: 25px;
+.card h3 {
+    color: #ff4d4d;
 
-    color: #777;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
+    margin-top: 0;
 }
 
 
-/* =========================================
-   CUBE
-========================================= */
+/* Reuse section */
 
-.cube {
-    width: 150px;
-    height: 150px;
-
-    position: relative;
-
-    transform:
-        rotateX(-20deg)
-        rotateY(-30deg);
-
-    transform-style: preserve-3d;
-}
-
-.cube-front,
-.cube-top,
-.cube-side {
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    border: 2px solid #ff5058;
-
-    background: rgba(255,80,80,0.05);
-}
-
-.cube-front {
-    transform: translateZ(75px);
-}
-
-.cube-top {
-    transform:
-        rotateX(90deg)
-        translateZ(75px);
-}
-
-.cube-side {
-    transform:
-        rotateY(90deg)
-        translateZ(75px);
-}
-
-
-/* =========================================
-   DOCUMENTATION
-========================================= */
-
-.timeline {
-    width: 100%;
-    max-width: 900px;
-
-    margin: 0 auto;
-}
-
-.timeline-item {
-    display: grid;
-
-    grid-template-columns:
-        80px
-        minmax(0, 1fr);
-
-    gap: 30px;
-
-    padding: 45px 0;
-
-    border-bottom: 1px solid #292c35;
-}
-
-.timeline-number {
-    color: #ff5058;
-
-    font-family: "Space Grotesk";
-
-    font-size: 30px;
-}
-
-.timeline-item h2 {
-    margin-bottom: 15px;
-}
-
-.timeline-item p {
-    color: #999;
-}
-
-.next-steps {
-    width: 100%;
-    max-width: 700px;
-
-    margin: 0 auto;
-
-    list-style: none;
-}
-
-.next-steps li {
-    padding: 20px;
-
-    border-bottom: 1px solid #292c35;
-
-    color: #aaa;
-}
-
-.next-steps li::before {
-    content: "→";
-
-    color: #ff5058;
-
-    margin-right: 15px;
-}
-
-
-/* =========================================
-   TEAM
-========================================= */
-
-.person-card {
-    min-height: 330px;
-}
-
-.person-number {
-    color: #ff5058;
-
-    font-size: 13px;
-}
-
-.person-card h2 {
-    margin-top: 60px;
-    margin-bottom: 5px;
-}
-
-.role {
-    color: #ff5058 !important;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 20px;
-}
-
-.center-content {
-    width: 100%;
-    max-width: 800px;
-
-    margin: 0 auto;
-
+.reuse {
     text-align: center;
 }
 
-.center-content h2 {
-    font-size: 70px;
+.reuse p {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+/* Footer */
 
 footer {
-    width: 100%;
-    max-width: 1200px;
+    background-color: #151820;
 
-    margin: 0 auto;
+    text-align: center;
 
-    padding: 40px;
+    padding: 25px;
 
-    display: flex;
+    color: #888;
 
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 25px;
-
-    border-top: 1px solid #24262e;
-
-    color: #777;
-
-    font-size: 12px;
-}
-
-footer strong {
-    color: white;
-
-    letter-spacing: 2px;
+    font-size: 14px;
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-    .hero {
-        padding: 70px 30px;
-    }
-
-    .hero-content {
-        width: 60%;
-    }
-
-    .moon {
-        width: 280px;
-        height: 280px;
-    }
-
-    .moon-circle {
-        width: 200px;
-        height: 200px;
-
-        left: 40px;
-        top: 40px;
-    }
-
-    .orbit {
-        width: 275px;
-        height: 110px;
-
-        top: 85px;
-    }
-
-    .intro-grid {
-        grid-template-columns:
-            minmax(0, 1fr)
-            minmax(0, 1fr);
-    }
-
-    .intro-grid > div:first-child {
-        grid-column: 1 / -1;
-        padding-right: 0;
-    }
-
-    .process-grid,
-    .goal-grid,
-    .feature-grid,
-    .team-grid,
-    .test-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
+/* Mobile */
 
 @media (max-width: 700px) {
 
-    .navbar {
-        padding: 15px 20px;
-    }
-
-    .nav-links {
-        display: none;
-
-        position: absolute;
-
-        top: 60px;
-        left: 0;
-
-        width: 100%;
-
-        padding: 10px 20px;
-
-        background: #08090d;
-
-        flex-direction: column;
-
-        border-bottom: 1px solid #292c35;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .nav-links a {
-        width: 100%;
-
-        padding: 12px 0;
-
-        border-bottom: 1px solid #1d1f25;
-    }
-
-    .menu-button {
+    nav a {
         display: block;
+
+        margin: 8px 0;
     }
 
-
-    /* HERO */
-
-    .hero {
-        min-height: auto;
-
-        padding: 80px 25px;
-
-        display: block;
+    .hero h2 {
+        font-size: 45px;
     }
 
-    .hero-content {
-        width: 100%;
-        max-width: none;
-    }
-
-    .hero h1 {
-        font-size: 58px;
-
-        letter-spacing: -3px;
-    }
-
-    .hero-text {
-        font-size: 15px;
-    }
-
-    .moon {
-        display: none;
-    }
-
-
-    /* SECTIONS */
-
-    .section {
-        padding: 75px 25px;
-    }
-
-    .dark-section {
-        padding: 75px 25px;
-    }
-
-
-    /* GRIDS */
-
-    .intro-grid,
-    .reuse-layout,
-    .two-column,
-    .process-grid,
-    .goal-grid,
-    .feature-grid,
-    .team-grid,
-    .test-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .intro-grid > div:first-child {
-        grid-column: auto;
-    }
-
-
-    /* STATS */
-
-    .stats {
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-    }
-
-
-    /* REUSE */
-
-    .reuse-layout {
-        gap: 40px;
-    }
-
-    .reuse-box {
-        min-height: 330px;
-    }
-
-
-    /* PAGE HERO */
-
-    .page-hero {
-        padding: 80px 25px 60px;
-    }
-
-    .page-hero h1 {
-        font-size: 60px;
-    }
-
-
-    /* DOCUMENTATION */
-
-    .timeline-item {
-        grid-template-columns:
-            55px
-            minmax(0, 1fr);
-
-        gap: 15px;
-    }
-
-
-    /* CTA */
-
-    .cta {
-        padding: 85px 25px;
-    }
-
-    .cta h2 {
-        font-size: 48px;
-    }
-
-
-    /* FOOTER */
-
-    footer {
-        padding: 35px 25px;
-
+    .cards {
         flex-direction: column;
-
-        align-items: flex-start;
-    }
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media (max-width: 480px) {
-
-    .hero h1 {
-        font-size: 50px;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .button {
-        width: fit-content;
-    }
-
-    .section h2,
-    .dark-section h2 {
-        font-size: 40px;
-    }
-
-    .reuse-layout h2 {
-        font-size: 38px;
-    }
-
-    .cta h2 {
-        font-size: 40px;
-    }
-
-    .table-shape {
-        transform: scale(0.8);
+    section {
+        padding: 50px 15px;
     }
 }
