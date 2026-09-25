@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-
-/* =========================
+/* =========================================
    RESET
-========================= */
+========================================= */
 
 * {
     margin: 0;
@@ -13,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -20,6 +20,7 @@ body {
     color: #f4f4f4;
     font-family: "Inter", sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 h1,
@@ -31,35 +32,32 @@ h4,
 }
 
 a {
-    color: inherit;
     text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
+    color: inherit;
 }
 
 
-/* =========================
+/* =========================================
    NAVIGATION
-========================= */
+========================================= */
 
 header {
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    background: rgba(8, 9, 13, 0.94);
-    backdrop-filter: blur(15px);
+    background: rgba(8, 9, 13, 0.96);
+    backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid #24262e;
+    border-bottom: 1px solid #252730;
 }
 
 .navbar {
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
 
+    margin: 0 auto;
     padding: 16px 30px;
 
     display: flex;
@@ -68,82 +66,80 @@ header {
 }
 
 .logo {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
 .logo span {
-    color: #ff4d4d;
+    color: #ff5058;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 25px;
 }
 
 .nav-links a {
-    color: #aaa;
-    font-size: 13px;
-    transition: 0.3s;
+    color: #999;
+    font-size: 12px;
+
+    transition: 0.2s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
     color: white;
 }
 
 .nav-links a.active {
-    border-bottom: 2px solid #ff4d4d;
+    color: white;
+    border-bottom: 2px solid #ff5058;
     padding-bottom: 4px;
 }
 
 .menu-button {
     display: none;
 
-    background: none;
     border: none;
+    background: none;
 
     color: white;
-    font-size: 25px;
+    font-size: 24px;
 
     cursor: pointer;
 }
 
 
-/* =========================
+/* =========================================
    HERO
-========================= */
+========================================= */
 
 .hero {
-    min-height: 76vh;
-
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
 
-    padding: 70px 40px;
+    min-height: 680px;
+
+    margin: 0 auto;
+    padding: 80px 40px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 60px;
-
-    position: relative;
-    overflow: hidden;
+    gap: 50px;
 }
 
 .hero-content {
+    width: 55%;
     max-width: 650px;
-    position: relative;
-    z-index: 2;
 }
 
 .eyebrow {
-    color: #ff5b5b;
+    color: #ff5058;
 
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
 
     letter-spacing: 3px;
@@ -152,73 +148,61 @@ header {
 }
 
 .hero h1 {
-    font-size: clamp(70px, 8vw, 110px);
+    margin: 0;
+
+    font-size: clamp(65px, 8vw, 105px);
 
     line-height: 0.88;
+
     letter-spacing: -4px;
-
-    margin: 0;
 }
 
-.hero h1 span,
-h2 span,
-.page-hero h1 span {
-    color: #ff5b5b;
-}
-
-.hero-subtitle {
-    color: #ddd;
-
-    font-size: 20px;
-    font-weight: 600;
-
-    margin-top: 22px;
+.hero h1 span {
+    color: #ff5058;
 }
 
 .hero-text {
-    max-width: 560px;
+    max-width: 540px;
 
-    color: #aaa;
+    margin-top: 25px;
 
-    font-size: 17px;
+    color: #999;
 
-    margin-top: 14px;
+    font-size: 16px;
 }
 
 .hero-buttons {
     display: flex;
+    gap: 12px;
 
-    gap: 15px;
-
-    margin-top: 28px;
+    margin-top: 30px;
 }
 
 
-/* =========================
+/* =========================================
    BUTTONS
-========================= */
+========================================= */
 
 .button {
     display: inline-block;
 
-    padding: 13px 23px;
+    padding: 12px 20px;
 
-    border-radius: 4px;
+    border-radius: 3px;
 
+    font-size: 13px;
     font-weight: 600;
-    font-size: 14px;
 
-    transition: 0.3s;
+    transition: 0.2s ease;
 }
 
 .button.primary {
-    background: #ff4d4d;
+    background: #ff5058;
     color: white;
 }
 
 .button.primary:hover {
-    background: #ff6a6a;
-
+    background: #ff7077;
     transform: translateY(-2px);
 }
 
@@ -229,18 +213,17 @@ h2 span,
 
 .button.secondary:hover {
     border-color: white;
-
     transform: translateY(-2px);
 }
 
 
-/* =========================
+/* =========================================
    MOON
-========================= */
+========================================= */
 
 .moon {
-    width: 360px;
-    height: 360px;
+    width: 340px;
+    height: 340px;
 
     position: relative;
 
@@ -248,8 +231,13 @@ h2 span,
 }
 
 .moon-circle {
-    width: 260px;
-    height: 260px;
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    top: 50px;
+    left: 50px;
 
     border-radius: 50%;
 
@@ -257,51 +245,49 @@ h2 span,
         radial-gradient(
             circle at 30% 30%,
             #ddd,
-            #888 55%,
+            #999 55%,
             #333
         );
 
     box-shadow:
-        0 0 80px rgba(255, 255, 255, 0.08);
-
-    position: absolute;
-
-    top: 45px;
-    left: 50px;
+        0 0 70px rgba(255,255,255,0.08);
 }
 
 .orbit {
-    width: 350px;
-    height: 140px;
+    position: absolute;
+
+    width: 330px;
+    height: 130px;
+
+    top: 105px;
+    left: 5px;
 
     border: 1px solid #333;
     border-radius: 50%;
-
-    position: absolute;
-
-    top: 105px;
-    left: 0;
 
     transform: rotate(-25deg);
 }
 
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* =========================================
+   GENERAL SECTION
+========================================= */
 
 .section {
+    width: 100%;
     max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
 
-    padding: 100px 30px;
+    padding: 100px 40px;
 }
 
 .dark-section {
-    background: #101116;
+    width: 100%;
 
-    padding: 100px 30px;
+    padding: 100px 40px;
+
+    background: #101116;
 }
 
 .section-heading {
@@ -312,85 +298,83 @@ h2 span,
     text-align: center;
 }
 
-.section-description {
-    max-width: 650px;
-
-    margin: 0 auto;
-
-    color: #999;
-
-    font-size: 16px;
-}
-
 .section h2,
 .dark-section h2 {
-    font-size: clamp(42px, 6vw, 72px);
+    margin-bottom: 20px;
+
+    font-size: clamp(45px, 6vw, 70px);
 
     line-height: 1;
+}
 
-    margin-bottom: 22px;
+.section h2 span {
+    color: #ff5058;
 }
 
 
-/* =========================
-   INTRO / CONCEPT
-========================= */
+/* =========================================
+   CONCEPT
+========================================= */
 
 .intro-grid {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns:
-        1.4fr
-        1fr
-        1fr;
+        minmax(0, 1.4fr)
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
     gap: 20px;
 }
 
-.intro-grid > div:first-child {
-    padding-right: 35px;
+.intro-grid > div {
+    min-width: 0;
 }
 
-.intro-text {
-    font-size: 16px;
+.intro-grid > div:first-child {
+    padding-right: 20px;
 }
 
 .intro-grid p {
     color: #aaa;
 
+    font-size: 15px;
+
     margin-bottom: 20px;
 }
 
 .concept-card {
+    min-width: 0;
+    min-height: 225px;
+
+    padding: 30px;
+
     background: #12141a;
 
     border: 1px solid #292c35;
 
-    padding: 28px;
-
-    min-height: 200px;
-
-    transition: 0.3s;
+    transition: 0.2s ease;
 }
 
 .concept-card:hover {
-    border-color: #ff5b5b;
-
-    transform: translateY(-4px);
+    border-color: #ff5058;
+    transform: translateY(-3px);
 }
 
 .card-number {
-    color: #ff4d4d;
+    color: #ff5058;
 
     font-size: 12px;
 
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 }
 
 .concept-card h3 {
-    margin-bottom: 10px;
+    font-size: 18px;
 
-    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .concept-card p {
@@ -398,35 +382,38 @@ h2 span,
 }
 
 
-/* =========================
-   STATS
-========================= */
+/* =========================================
+   PROTOTYPE
+========================================= */
 
 .stats {
+    width: 100%;
     max-width: 900px;
 
-    margin: 40px auto 0;
+    margin: 45px auto 0;
 
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
     gap: 30px;
 }
 
 .stat {
-    border-top: 1px solid #444;
+    min-width: 0;
 
     padding-top: 20px;
+
+    border-top: 1px solid #444;
 }
 
 .stat strong {
     display: block;
 
-    font-family: "Space Grotesk";
+    font-family: "Space Grotesk", sans-serif;
 
-    font-size: 42px;
+    font-size: 40px;
 
     margin-bottom: 5px;
 }
@@ -434,60 +421,75 @@ h2 span,
 .stat span {
     color: #888;
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
-/* =========================
-   REUSE / TABLE
-========================= */
+/* =========================================
+   REUSE
+========================================= */
 
 .reuse-layout {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns:
-        1fr
-        1fr;
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
-    gap: 70px;
+    gap: 60px;
 
     align-items: center;
 }
 
+.reuse-layout > div {
+    min-width: 0;
+}
+
 .reuse-layout h2 {
-    font-size: clamp(45px, 5vw, 65px);
+    font-size: clamp(42px, 5vw, 65px);
 
     line-height: 1;
 
     margin-bottom: 25px;
 }
 
+.reuse-layout h2 span {
+    color: #ff5058;
+}
+
 .reuse-layout p {
+    max-width: 540px;
+
     color: #aaa;
 
-    margin-bottom: 20px;
+    font-size: 15px;
 
-    max-width: 550px;
+    margin-bottom: 20px;
 }
 
 .text-link {
-    color: #ff5b5b;
-
-    font-weight: 600;
-
     display: inline-block;
 
-    margin-top: 10px;
+    margin-top: 8px;
 
-    transition: 0.3s;
+    color: #ff5058;
+
+    font-weight: 600;
 }
 
 .text-link:hover {
     color: #ff8585;
-    transform: translateX(4px);
 }
 
+
+/* =========================================
+   TABLE
+========================================= */
+
 .reuse-box {
+    width: 100%;
     min-height: 400px;
 
     background: #11131a;
@@ -495,27 +497,17 @@ h2 span,
     border: 1px solid #292c35;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     flex-direction: column;
 }
 
-
-/* =========================
-   TABLE VISUAL
-========================= */
-
 .table-shape {
     width: 250px;
     height: 190px;
 
     position: relative;
-
-    transform: perspective(500px)
-               rotateX(8deg)
-               rotateY(-8deg);
 }
 
 .table-top {
@@ -527,32 +519,22 @@ h2 span,
     width: 250px;
     height: 35px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #aaa,
-            #777
-        );
+    background: #999;
 
-    border: 1px solid #bbb;
+    border: 1px solid #aaa;
 
-    transform: skew(-15deg);
-
-    box-shadow:
-        0 8px 15px rgba(0, 0, 0, 0.4);
+    transform: skew(-12deg);
 }
 
 .leg {
     position: absolute;
 
+    top: 58px;
+
     width: 20px;
     height: 120px;
 
     background: #666;
-
-    top: 58px;
-
-    border: 1px solid #777;
 }
 
 .leg-one {
@@ -572,88 +554,93 @@ h2 span,
 }
 
 .reuse-box > p {
-    margin-top: 30px;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
+    margin-top: 25px;
 
     color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
 }
 
 
-/* =========================
+/* =========================================
    CTA
-========================= */
+========================================= */
 
 .cta {
-    text-align: center;
+    width: 100%;
 
     padding: 110px 30px;
 
-    background: #0d0e13;
+    text-align: center;
+
+    background: #101116;
 }
 
 .cta h2 {
-    font-size: clamp(50px, 7vw, 90px);
+    margin-bottom: 30px;
+
+    font-size: clamp(50px, 7vw, 85px);
 
     line-height: 1;
-
-    margin-bottom: 25px;
 }
 
-.cta-text {
-    color: #999;
-
-    max-width: 550px;
-
-    margin: 0 auto;
+.cta h2 span {
+    color: #ff5058;
 }
 
 
-/* =========================
+/* =========================================
    PAGE HERO
-========================= */
+========================================= */
 
 .page-hero {
+    width: 100%;
     max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
 
-    padding: 110px 30px 90px;
+    padding: 100px 40px 80px;
 }
 
 .page-hero h1 {
-    font-size: clamp(65px, 10vw, 120px);
+    font-size: clamp(60px, 9vw, 115px);
 
     line-height: 0.9;
 
     letter-spacing: -4px;
 }
 
-.page-hero > p:last-child {
-    color: #aaa;
-
-    max-width: 650px;
-
-    font-size: 19px;
-
-    margin-top: 30px;
+.page-hero h1 span {
+    color: #ff5058;
 }
 
 
-/* =========================
+/* =========================================
    TWO COLUMN
-========================= */
+========================================= */
 
 .two-column {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns:
-        1fr
-        1fr;
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
-    gap: 70px;
+    gap: 60px;
+}
+
+.two-column > div {
+    min-width: 0;
+}
+
+.two-column h2 {
+    font-size: 50px;
+
+    line-height: 1;
 }
 
 .two-column p {
@@ -662,28 +649,25 @@ h2 span,
     margin-bottom: 20px;
 }
 
-.two-column h2 {
-    font-size: 55px;
-}
 
-
-/* =========================
+/* =========================================
    CARDS
-========================= */
+========================================= */
 
 .process-grid,
 .goal-grid,
 .feature-grid,
 .team-grid,
 .test-grid {
+    width: 100%;
     max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
     gap: 20px;
 }
@@ -693,13 +677,15 @@ h2 span,
 .feature-card,
 .person-card,
 .test-card {
-    padding: 35px;
+    min-width: 0;
+
+    padding: 30px;
 
     background: #15171e;
 
     border: 1px solid #292c35;
 
-    transition: 0.3s;
+    transition: 0.2s ease;
 }
 
 .process-card:hover,
@@ -714,15 +700,13 @@ h2 span,
 
 .process-card span,
 .test-card strong {
-    color: #ff5b5b;
-
-    font-size: 13px;
+    color: #ff5058;
 }
 
 .process-card h3,
 .info-card h3,
 .feature-card h3 {
-    margin: 30px 0 12px;
+    margin: 25px 0 10px;
 }
 
 .process-card p,
@@ -734,17 +718,12 @@ h2 span,
 }
 
 
-/* =========================
+/* =========================================
    DESIGN
-========================= */
-
-.feature-icon {
-    font-size: 35px;
-
-    color: #ff5b5b;
-}
+========================================= */
 
 .model-placeholder {
+    width: 100%;
     min-height: 400px;
 
     background: #090a0e;
@@ -752,7 +731,6 @@ h2 span,
     border: 1px solid #333;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -760,19 +738,19 @@ h2 span,
 }
 
 .model-placeholder p {
-    font-size: 10px;
-
-    letter-spacing: 2px;
+    margin-top: 25px;
 
     color: #777;
 
-    margin-top: 30px;
+    font-size: 10px;
+
+    letter-spacing: 2px;
 }
 
 
-/* =========================
-   3D CUBE
-========================= */
+/* =========================================
+   CUBE
+========================================= */
 
 .cube {
     width: 150px;
@@ -795,14 +773,13 @@ h2 span,
     width: 150px;
     height: 150px;
 
-    border: 2px solid #ff5b5b;
+    border: 2px solid #ff5058;
 
-    background: rgba(255, 80, 80, 0.05);
+    background: rgba(255,80,80,0.05);
 }
 
 .cube-front {
-    transform:
-        translateZ(75px);
+    transform: translateZ(75px);
 }
 
 .cube-top {
@@ -818,36 +795,37 @@ h2 span,
 }
 
 
-/* =========================
+/* =========================================
    DOCUMENTATION
-========================= */
+========================================= */
 
 .timeline {
+    width: 100%;
     max-width: 900px;
 
-    margin: auto;
+    margin: 0 auto;
 }
 
 .timeline-item {
     display: grid;
 
     grid-template-columns:
-        100px
-        1fr;
+        80px
+        minmax(0, 1fr);
 
-    gap: 40px;
+    gap: 30px;
 
-    padding: 50px 0;
+    padding: 45px 0;
 
     border-bottom: 1px solid #292c35;
 }
 
 .timeline-number {
-    font-size: 30px;
-
-    color: #ff5b5b;
+    color: #ff5058;
 
     font-family: "Space Grotesk";
+
+    font-size: 30px;
 }
 
 .timeline-item h2 {
@@ -858,15 +836,11 @@ h2 span,
     color: #999;
 }
 
-.test-grid {
-    grid-template-columns:
-        repeat(3, 1fr);
-}
-
 .next-steps {
+    width: 100%;
     max-width: 700px;
 
-    margin: auto;
+    margin: 0 auto;
 
     list-style: none;
 }
@@ -882,80 +856,79 @@ h2 span,
 .next-steps li::before {
     content: "→";
 
-    color: #ff5b5b;
+    color: #ff5058;
 
     margin-right: 15px;
 }
 
 
-/* =========================
+/* =========================================
    TEAM
-========================= */
-
-.team-grid {
-    grid-template-columns:
-        repeat(3, 1fr);
-}
+========================================= */
 
 .person-card {
-    min-height: 350px;
+    min-height: 330px;
 }
 
 .person-number {
-    color: #ff5b5b;
+    color: #ff5058;
 
     font-size: 13px;
 }
 
 .person-card h2 {
-    margin: 70px 0 5px;
+    margin-top: 60px;
+    margin-bottom: 5px;
 }
 
 .role {
+    color: #ff5058 !important;
+
     font-size: 11px;
 
     letter-spacing: 2px;
-
-    color: #ff5b5b !important;
 
     margin-bottom: 20px;
 }
 
 .center-content {
+    width: 100%;
     max-width: 800px;
 
-    margin: auto;
+    margin: 0 auto;
 
     text-align: center;
 }
 
 .center-content h2 {
-    font-size: 80px;
+    font-size: 70px;
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
+    width: 100%;
     max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
 
-    padding: 45px 30px;
+    padding: 40px;
 
     display: flex;
 
+    align-items: center;
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 25px;
 
     border-top: 1px solid #24262e;
 
     color: #777;
 
-    font-size: 13px;
+    font-size: 12px;
 }
 
 footer strong {
@@ -965,21 +938,18 @@ footer strong {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 900px) {
 
     .hero {
-        min-height: auto;
+        padding: 70px 30px;
+    }
 
-        padding:
-            80px
-            30px
-            90px;
-
-        gap: 30px;
+    .hero-content {
+        width: 60%;
     }
 
     .moon {
@@ -988,43 +958,47 @@ footer strong {
     }
 
     .moon-circle {
-        width: 210px;
-        height: 210px;
+        width: 200px;
+        height: 200px;
 
-        left: 35px;
-        top: 35px;
+        left: 40px;
+        top: 40px;
     }
 
     .orbit {
         width: 275px;
-        height: 115px;
+        height: 110px;
 
-        top: 80px;
+        top: 85px;
     }
 
     .intro-grid {
         grid-template-columns:
-            1fr
-            1fr;
+            minmax(0, 1fr)
+            minmax(0, 1fr);
     }
 
     .intro-grid > div:first-child {
         grid-column: 1 / -1;
-
         padding-right: 0;
     }
 
-    .reuse-layout {
-        gap: 45px;
-    }
-
-    .stats {
-        max-width: 700px;
+    .process-grid,
+    .goal-grid,
+    .feature-grid,
+    .team-grid,
+    .test-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 }
 
 
-@media (max-width: 800px) {
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
 
     .navbar {
         padding: 15px 20px;
@@ -1035,37 +1009,30 @@ footer strong {
 
         position: absolute;
 
-        top: 62px;
+        top: 60px;
         left: 0;
 
         width: 100%;
+
+        padding: 10px 20px;
 
         background: #08090d;
 
         flex-direction: column;
 
-        gap: 0;
-
-        padding: 15px 20px;
-
-        border-bottom:
-            1px solid #292c35;
-    }
-
-    .nav-links a {
-        padding: 14px 0;
-
-        border-bottom:
-            1px solid #1d1f25;
-    }
-
-    .nav-links a.active {
-        border-bottom:
-            1px solid #ff4d4d;
+        border-bottom: 1px solid #292c35;
     }
 
     .nav-links.show {
         display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+
+        padding: 12px 0;
+
+        border-bottom: 1px solid #1d1f25;
     }
 
     .menu-button {
@@ -1078,30 +1045,24 @@ footer strong {
     .hero {
         min-height: auto;
 
-        padding:
-            70px
-            25px
-            80px;
+        padding: 80px 25px;
 
         display: block;
     }
 
+    .hero-content {
+        width: 100%;
+        max-width: none;
+    }
+
     .hero h1 {
-        font-size: 65px;
+        font-size: 58px;
 
         letter-spacing: -3px;
     }
 
-    .hero-subtitle {
-        font-size: 18px;
-    }
-
     .hero-text {
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-        flex-wrap: wrap;
+        font-size: 15px;
     }
 
     .moon {
@@ -1112,27 +1073,19 @@ footer strong {
     /* SECTIONS */
 
     .section {
-        padding:
-            75px
-            25px;
+        padding: 75px 25px;
     }
 
     .dark-section {
-        padding:
-            75px
-            25px;
-    }
-
-    .section-heading {
-        margin-bottom: 35px;
+        padding: 75px 25px;
     }
 
 
     /* GRIDS */
 
     .intro-grid,
-    .two-column,
     .reuse-layout,
+    .two-column,
     .process-grid,
     .goal-grid,
     .feature-grid,
@@ -1149,14 +1102,9 @@ footer strong {
     /* STATS */
 
     .stats {
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns: 1fr;
 
         gap: 25px;
-    }
-
-    .stat strong {
-        font-size: 35px;
     }
 
 
@@ -1166,49 +1114,19 @@ footer strong {
         gap: 40px;
     }
 
-    .reuse-layout h2 {
-        font-size: 42px;
-    }
-
     .reuse-box {
         min-height: 330px;
     }
 
 
-    /* CTA */
-
-    .cta {
-        padding:
-            90px
-            25px;
-    }
-
-    .cta h2 {
-        font-size: 50px;
-    }
-
-
-    /* OTHER PAGES */
+    /* PAGE HERO */
 
     .page-hero {
-        padding:
-            80px
-            25px
-            70px;
+        padding: 80px 25px 60px;
     }
 
     .page-hero h1 {
-        font-size: 65px;
-
-        letter-spacing: -3px;
-    }
-
-    .two-column h2 {
-        font-size: 42px;
-    }
-
-    .center-content h2 {
-        font-size: 55px;
+        font-size: 60px;
     }
 
 
@@ -1216,79 +1134,58 @@ footer strong {
 
     .timeline-item {
         grid-template-columns:
-            60px
-            1fr;
+            55px
+            minmax(0, 1fr);
 
-        gap: 20px;
-
-        padding: 35px 0;
+        gap: 15px;
     }
 
 
-    /* TEAM */
+    /* CTA */
 
-    .person-card {
-        min-height: 280px;
+    .cta {
+        padding: 85px 25px;
     }
 
-    .person-card h2 {
-        margin-top: 45px;
+    .cta h2 {
+        font-size: 48px;
     }
 
 
     /* FOOTER */
 
     footer {
+        padding: 35px 25px;
+
         flex-direction: column;
 
-        gap: 20px;
-
-        padding:
-            40px
-            25px;
+        align-items: flex-start;
     }
 }
 
 
-/* =========================
+/* =========================================
    SMALL PHONES
-========================= */
+========================================= */
 
 @media (max-width: 480px) {
 
     .hero h1 {
-        font-size: 54px;
+        font-size: 50px;
     }
 
-    .hero-subtitle {
-        font-size: 16px;
-    }
-
-    .eyebrow {
-        font-size: 9px;
-
-        letter-spacing: 2px;
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .button {
-        padding:
-            12px
-            18px;
-
-        font-size: 13px;
-    }
-
-    .stats {
-        grid-template-columns: 1fr;
-    }
-
-    .stat strong {
-        font-size: 38px;
+        width: fit-content;
     }
 
     .section h2,
     .dark-section h2 {
-        font-size: 42px;
+        font-size: 40px;
     }
 
     .reuse-layout h2 {
@@ -1296,14 +1193,10 @@ footer strong {
     }
 
     .cta h2 {
-        font-size: 42px;
+        font-size: 40px;
     }
 
     .table-shape {
-        transform:
-            scale(0.85)
-            perspective(500px)
-            rotateX(8deg)
-            rotateY(-8deg);
+        transform: scale(0.8);
     }
 }
